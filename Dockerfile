@@ -14,6 +14,7 @@ RUN apt-get install maven -y
 # roda o mvn onde gera o .JAR na pasta target
 RUN mvn clean install
 
+FROM openjdk:17-jdk-slim
 EXPOSE 8080
 
 # copia o build do jar da pasta target para o app na nuvem
